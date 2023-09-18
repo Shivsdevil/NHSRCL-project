@@ -1,0 +1,208 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2';
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 10px;
+}
+
+/* Navigation Bar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Navbar : Logo and Image */
+#logo {
+    margin: 0px 0px;
+
+}
+
+#logo img {
+    margin: 3px 14px;
+    height: 6dvw;
+}
+
+/* Navbar : List Styling */
+#navbar a {
+    text-decoration: none;
+}
+
+#companyName {
+    color: #0e1d5a;
+    /* position: relative; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2lvw;
+    font-size-adjust: inherit;
+}
+
+#navbar a div {
+    min-width: 95%;
+    width: 95%;
+    display: flex;
+    position: relative;
+}
+
+#navbar ul {
+    display: inline-flex;
+}
+
+#navbar::before {
+    content: "";
+    background: url("../img/background.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 17dvh;
+    width: 100dvw;
+    z-index: -1;
+    box-shadow: 0 0 60px 5px rgb(230, 226, 221) inset;
+}
+
+#navbar ul li {
+    list-style: none;
+    display: block;
+}
+
+#navbar ul li a {
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2dvw;
+}
+
+#navbar ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+input {
+    border-radius: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+input:focus {
+    background-color: rgb(229, 245, 243);
+}
+
+#searchBar {
+    width: 11dvw;
+    margin-left: 5vw;
+    border: 1px solid rgb(71, 69, 69);
+    box-shadow: -1px 1px 10px black;
+    display: inline-block;
+    position: relative;
+}
+
+button {
+    border-radius: 20px;
+    width: 4dvw;
+    box-shadow: 1px 0px 5px black;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: all ease-in-out 0.3s;
+}
+
+.middleBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 145px;
+}
+
+.block img {
+    width: 45vw;
+    height: 60vh;
+}
+
+.middleBody::before {
+    content: "";
+    background-image: url("https://wallpaperaccess.com/full/1457224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    box-shadow: 0 0 60px 2px rgb(255, 234, 209) inset;
+    top: 16dvh;
+}
+
+.middleBody div h1 {
+    text-align: center;
+    width: 100vmin;
+    font-size: 2vw;
+    text-shadow: 3px 3px 3px white;
+}
+
+.flex-left {
+    display: inline-flex;
+    width: 21dvw;
+    align-items: center;
+    color: white;
+}
+
+#CounterVisitor {
+    display: inline-flex;
+    width: 56dvw;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#developed {
+    display: inline-flex;
+    width: 20.5dvw;
+    align-items: center;
+    justify-content: right;
+}
+
+.right {
+    color: white;
+    display: inline;
+}
+
+#modified {
+    margin-left: 83dvw;
+    display: inline;
+    float: inline-start;
+}
+
+.right #demo {
+    display: inline-flex;
+    float: inline-end;
+}
+
+footer::before {
+    content: "";
+    background-color: black;
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    width: 100dvw;
+    height: 10dvh;
+}
