@@ -11,11 +11,15 @@
 }
 
 /* Navigation Bar */
-
+header{
+    max-width: 100%;
+}
 #navbar {
     display: flex;
     align-items: center;
-    position: relative;
+    position: fixed;
+    max-width: 100%;
+
 }
 
 /* Navbar : Logo and Image */
@@ -57,9 +61,10 @@
 #navbar::before {
     content: "";
     background: url("../img/background.jpg") no-repeat center center/cover;
-    position: absolute;
+    position: fixed;
     height: 17dvh;
-    width: 100dvw;
+    max-width: 100%;
+    width: 100%;
     z-index: -1;
     box-shadow: 0 0 60px 5px rgb(230, 226, 221) inset;
 }
@@ -146,8 +151,8 @@ button:hover {
     z-index: -1;
     display: block;
     position: absolute;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
+    height: 85%;
     box-shadow: 0 0 60px 2px rgb(255, 234, 209) inset;
     top: 16dvh;
 }
@@ -161,48 +166,60 @@ button:hover {
 
 .flex-left {
     display: inline-flex;
-    width: 21dvw;
+    width: 33%;
     align-items: center;
     color: white;
 }
 
 #CounterVisitor {
     display: inline-flex;
-    width: 56dvw;
+    width: 73%;
     align-items: center;
     justify-content: center;
     color: white;
 }
 
+#CounterVisitor:hover{
+    /* text-shadow: 5px 5px 10px whitesmoke; */
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #0af3e0, 0 0 2px #0af3e0, 0 0 2px #0af3e0, 0 0 2px #0af3e0, 0 0 2px #0af3e0;
+    }
+    to {
+      text-shadow: 0 0 7px #fff, 0 0 7px #8dc7e9, 0 0 7px #8dc7e9, 0 0 7px #8dc7e9, 0 0 7px #8dc7e9, 0 0 7px #8dc7e9, 0 0 7px #8dc7e9;
+    }
+  }
+
 #developed {
-    display: inline-flex;
-    width: 20.5dvw;
+    display: inline; */
+    width: 10dvw;
     align-items: center;
     justify-content: right;
+    color: aliceblue;
 }
 
 .right {
     color: white;
     display: inline;
+    width: 33%;
 }
 
 #modified {
-    margin-left: 83dvw;
     display: inline;
-    float: inline-start;
 }
 
-.right #demo {
-    display: inline-flex;
-    float: inline-end;
+#demo {
+    display: inline;
 }
 
-footer::before {
+footer{
     content: "";
     background-color: black;
     z-index: -1;
-    position: absolute;
-    display: flex;
-    width: 100dvw;
-    height: 10dvh;
+    width: 100%;
+    max-width: 100%;
+    display: inline-flex;
 }

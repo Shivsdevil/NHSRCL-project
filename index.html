@@ -12,70 +12,77 @@
 </head>
 
 <body>
-    <nav id="navbar">
-        <div id="logo">
-            <a href="http://127.0.0.1:5500/index.html">
-                <img src="img/Logo.png" alt="NHSRCL">
-            </a>
-        </div>
-        <a href="http://127.0.0.1:5500/index.html">
-            <div id="companyName">NATIONAL HIGH SPEED RAIL CORPORATION LIMITED<br>नेशनल हाई स्पीड रेल कॉर्पोरेशन लिमिटेड
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <a href="http://127.0.0.1:5500/index.html">
+                    <img src="img/Logo.png" alt="NHSRCL">
+                </a>
             </div>
-        </a>
-        <ul>
-            <li class="item1"><a href="http://127.0.0.1:5500/index.html">Home</a></li>
-            <li class="item2"><a href="https://nhsrcl.in/en/project/project-highlights">Projects</a></li>
-            <li class="item3"><a href="https://nhsrcl.in/en/tenders/awarded-tenders">Tenders</a></li>
-            <li class="item4"><a href="https://nhsrcl.in/index.php/en/about-us/about-nhsrcls">About Us</a></li>
-            <li class="item5"><a href="https://nhsrcl.in/en/rti/contact-details">Contact Us</a></li>
-        </ul>
-        <input type="search" name="searchBar" id="searchBar" placeholder="Search for &#8221;bullet train&#8221;">
-        <button class="btn">Search</button>
-    </nav>
-    <div class="middleBody">
-        <div id="left" class="block">
-            <h1>Welcome to NHSRCL</h1>
-            <img src="https://nhsrcl.in/sites/default/files/Slider/Slider-01.jpg" alt="">
-        </div>
-        <div id="right" class="block">
-            <h1>NHSRCL Alignment</h1>
-            <img src="https://nhsrcl.in/sites/default/files/Slider/Creative-01.jpg" alt="">
-        </div>
-    </div>
+            <a href="http://127.0.0.1:5500/index.html">
+                <div id="companyName">NATIONAL HIGH SPEED RAIL CORPORATION LIMITED<br>नेशनल हाई स्पीड रेल कॉर्पोरेशन
+                    लिमिटेड
+                </div>
+            </a>
+            <ul>
+                <li class="item1"><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li class="item2"><a href="https://nhsrcl.in/en/project/project-highlights">Projects</a></li>
+                <li class="item3"><a href="https://nhsrcl.in/en/tenders/awarded-tenders">Tenders</a></li>
+                <li class="item4"><a href="https://nhsrcl.in/index.php/en/about-us/about-nhsrcls">About Us</a></li>
+                <li class="item5"><a href="https://nhsrcl.in/en/rti/contact-details">Contact Us</a></li>
+            </ul>
+            <input type="search" name="searchBar" id="searchBar" placeholder="Search for &#8221;bullet train&#8221;">
+            <button class="btn">Search</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="middleBody">
+            <div id="left" class="block">
+                <h1>Welcome to NHSRCL</h1>
+                <img src="https://nhsrcl.in/sites/default/files/Slider/Slider-01.jpg" alt="">
+            </div>
+            <div id="right" class="block">
+                <h1>NHSRCL Alignment</h1>
+                <img src="https://nhsrcl.in/sites/default/files/Slider/Creative-01.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="flex-left">
+            <p>Copyright &copy; 2019 NHSRCL. All Rights Reserved.</p>
+        </section>
+        <section id="CounterVisitor">
+            <script>
+                var n = localStorage.getItem('on_load_counter');
+
+                if (n === null) {
+                    n = 0;
+                }
+                n++;
+
+                localStorage.setItem("on_load_counter", n);
+
+                nums = n.toString().split('').map(Number);
+                document.getElementById('CounterVisitor').innerHTML = 'Total visitors : ';
+                for (var i of nums) {
+                    document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+                }
+
+            </script>
+        </section>
+        <section class="right">
+            <p id="developed">Developed & Maintained by Shivam Srivastava</p>
+            <p id="modified"><br>Last modified: </p>
+            <p id="demo"></p>
+
+            <script>
+                let text = document.lastModified;
+                document.getElementById("demo").innerHTML = text;
+            </script>
+        </section>
+    </footer>
 </body>
-<footer>
-    <div class="flex-left">
-        Copyright &copy; 2019 NHSRCL. All Rights Reserved.
-    </div>
-    <div id="CounterVisitor">
-        <script>
-            var n = localStorage.getItem('on_load_counter');
-
-            if (n === null) {
-                n = 0;
-            }
-            n++;
-
-            localStorage.setItem("on_load_counter", n);
-
-            nums = n.toString().split('').map(Number);
-            document.getElementById('CounterVisitor').innerHTML = 'Total visitors : ';
-            for (var i of nums) {
-                document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
-            }
-
-        </script>
-    </div>
-    <div class="right">
-        <p id="developed">Developed & Maintained by Shivam Srivastava</p>
-        <p id="modified">Last modified: </p>
-        <p id="demo"></p>
-
-        <script>
-            let text = document.lastModified;
-            document.getElementById("demo").innerHTML = text;
-        </script>
-    </div>
-</footer>
-
 </html>
